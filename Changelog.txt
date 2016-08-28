@@ -1,8 +1,0 @@
---------------------Changelog--------------------
-
-Version: 1.0
-
-- Released with
-	- Random Mountanous Terrain Generator
-	- Main Class to put the terrain together
-	- Line Class for splitting the fractal
