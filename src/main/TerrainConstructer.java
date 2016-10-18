@@ -6,26 +6,26 @@ import java.util.ArrayList;
 
 public class TerrainConstructer {
 
+	// The dimensions/variables of the World
+	final static int X = 4000;
+	final static int Y = 50;
+	
+	// The number of distortions is 2 to the power of this number minus 1
+	final static int NUM_DISTORTIONS = 9;
+	
+	// The variable responsible for how mountainous the terrain is
+	static double random = 18;
+	
 	public static void main(String[] args) throws IOException {
 		PrintWriter writer = new PrintWriter("World.txt");
 
-		// The dimensions/variables of the World
-		int x = 4000;
-		int y = 50;
-		char[][] grid = new char[x][y];
+		char[][] grid = new char[X][Y];
 		ArrayList<Line> lines = new ArrayList<>();
-		
-		// The number of distortions is 2 to the power of this number minus 1
-		int numDistortions = 9;
-
-		// The variable responsible for how mountainous the terrain is
-		double random = 18;
 
 		// Adds one straight line at the center of the y
-		lines.add(new Line(0, x, y / 2, y / 2));
+		lines.add(new Line(0, X, Y / 2, Y / 2));
 		
-		for (int i = 0; i < numDistortions; i++) {	
-			// Runs once for every line in the list
+		for (int i = 0; i < NUM_DISTORTIONS; i++) {	
 			int length = lines.size();
 			for (int j = 0; j < length; j++) {
 				
